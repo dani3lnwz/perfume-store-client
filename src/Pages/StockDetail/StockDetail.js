@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
+import useProductDetail from './../../hooks/useProductDetail';
 
 const StockDetail = () => {
-    const {stockId} = useParams();
+    const {productId} = useParams();
+    const [product] = useProductDetail(productId);
+
     return (
         <div>
-            <h2>Welcome to stock detail: {stockId}</h2>
+            <h2>You are about to book: {product.name}</h2>
             <div className='text-center'>
-            <Link to="/update">
-                <button className='btn btn-primary'>Update Stocke</button>
+            <Link to={`/update/${productId}`}>
+                <button className='btn btn-primary'>Update Stock</button>
             </Link>
             </div>
         </div>

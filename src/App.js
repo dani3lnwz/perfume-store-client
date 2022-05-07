@@ -10,6 +10,8 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Update from './Pages/Update/Update/Update';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import AddProduct from './Pages/AddProduct/AddProduct';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
 
 
 function App() {
@@ -19,13 +21,23 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        <Route path='/stock/:stockId' element={<StockDetail></StockDetail>}></Route>
+        <Route path='/product/:productId' element={<StockDetail></StockDetail>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
-        <Route path="/update" element={
+        <Route path="/update/:productId" element={
           <RequireAuth>
             <Update></Update>
+          </RequireAuth>
+        }></Route>
+        <Route path="/addproduct" element={
+          <RequireAuth>
+            <AddProduct></AddProduct>
+          </RequireAuth>
+        }></Route>
+        <Route path="/manage" element={
+          <RequireAuth>
+            <ManageProducts></ManageProducts>
           </RequireAuth>
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
