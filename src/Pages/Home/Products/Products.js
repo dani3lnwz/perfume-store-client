@@ -28,7 +28,7 @@ const Products = () => {
             </div>
 
             <div className='container mx-auto w-25 navigation-btn'>
-                <button className='my-5 nav-btn' onClick={() => navigate('/manage')}>Manage Inventories</button>
+                <button className='btn btn-primary my-5 nav-btn' onClick={() => navigate('/manage')}>Manage Inventories</button>
             </div>
             
         </div>

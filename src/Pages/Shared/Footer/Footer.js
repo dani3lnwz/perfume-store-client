@@ -17,6 +17,8 @@ const Footer = () => {
         <p>Product</p>
         <p>New Arriable</p>
         <p>Brands</p>
+        <p>Manage Products</p>
+        <p>Blogs</p>
     </div>
     <div className="col">
         <h4>Vist</h4>
@@ -31,16 +33,18 @@ const Footer = () => {
     </div>
     <div className="col">
         <h4>Contact</h4>
-        <h5>Daniel Newaz</h5>
+        <h5 className='mt-2'>Daniel Newaz</h5>
         <p>Phone No: 01785989100</p>
+        <img style={{width: '50px', marginLeft: '10px'}} src={insta} alt="" />
+        <img style={{width: '30px'}} src={facebook} alt="" />
     </div>
   </div>
 </div>
             </div>
             <div  id='footer' className='text-center mt-2'>
-            <img style={{width: '50px', marginLeft: '10px'}} src={insta} alt="" />
-            {/* <img style={{width: '30px'}} src={facebook} alt="" /> */}
-            <p className='text-light mt-2'>All RIGHT ARE RESERVED</p>
+            
+            
+            <p className='text-light mt-5'>All RIGHT ARE RESERVED</p>
             <p id='foot' className='text-light'>copyright ©  {year} </p>
             </div>
             

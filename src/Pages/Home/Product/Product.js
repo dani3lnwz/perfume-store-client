@@ -14,13 +14,11 @@ const Product = ({product}) => {
         <div className='product'>
             <img className='w-100' src={img} alt="" />
             <h2>{name}
-            {/* {name.length > 20 ? name.slice(0, 20) + '...': name} */}
             </h2>
 
             <p>Price: {price}</p>
             <p>Stock: {stock}</p>
             <p>{description}</p>
-            <p>Shipping: {}</p>
             <p>Quantity: {quantity}</p>
             <button onClick={() => navigateToProductDetail(_id)} className='btn btn-primary'>Book: {name}</button>
         </div>

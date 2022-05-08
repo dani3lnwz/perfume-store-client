@@ -20,7 +20,7 @@ const newArriables = [
 const NewArriables = () => {
     return (
         <div id='newArriables' className='container'>
-            <h2 className='text-primary text-center mt-5'>New Arraibles</h2>
+            <h2 className='text-dark text-center mt-5'>New Arraibles</h2>
             <div className='row'>
                 {
                     newArriables.map(newArriable => <NewArriable

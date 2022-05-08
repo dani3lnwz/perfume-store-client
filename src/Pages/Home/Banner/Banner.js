@@ -74,8 +74,8 @@ const Banner = () => {
             <div className='card'>
                 <img src={banner1} alt="" />
                 <div className='info'>
-                    <h1>Heading</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, placeat.</p>
+                    <h1>JACK DANIEL</h1>
+                    <p className='text-light'>The Best We Preafer</p>
                     <a href ="#" className='btn'>Read More</a>
                 </div>
             </div>
@@ -83,8 +83,8 @@ const Banner = () => {
             <div className='card'>
                 <img src={banner2} alt="" />
                 <div className='info'>
-                    <h1>Heading</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, placeat.</p>
+                    <h1>SPLENDID WOOD</h1>
+                    <p>The Best We Have</p>
                     <a href ="#" className='btn'>Read More</a>
                 </div>
             </div>
@@ -92,8 +92,8 @@ const Banner = () => {
             <div className='card'>
                 <img src={banner3} alt="" />
                 <div className='info'>
-                    <h1>Heading</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, placeat.</p>
+                    <h1>SAVUAGE</h1>
+                    <p>THe best we stock</p>
                     <a href ="#" className='btn'>Read More</a>
                 </div>
             </div>

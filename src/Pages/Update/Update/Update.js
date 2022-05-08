@@ -66,7 +66,7 @@ const Update = () => {
 
 
     return (
-        <div>
+        <div n>
             <div className='text-center my-5'>
                 <h1>Please update your item: {product.name}</h1>
             </div>
