@@ -12,7 +12,9 @@ import Update from './Pages/Update/Update/Update';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import ManageProducts from './Pages/ManageProducts/ManageProducts';
+// import MyItems from './pages/MyItems/MyItems';
 import Blogs from './Pages/Blogs/Blogs';
+import MyItems from './Pages/MyItems/MyItems';
 
 
 function App() {
@@ -40,6 +42,11 @@ function App() {
         <Route path="/manage" element={
           <RequireAuth>
             <ManageProducts></ManageProducts>
+          </RequireAuth>
+        }></Route>
+        <Route path="/myitems" element={
+          <RequireAuth>
+            <MyItems></MyItems>
           </RequireAuth>
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
