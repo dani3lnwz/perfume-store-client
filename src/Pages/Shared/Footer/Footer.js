@@ -10,26 +10,26 @@ const Footer = () => {
         <footer className='bg-dark mt-5'>
             <div className='mt-3'>
             <div className='container text-light'>
-  <div class="row row-cols-4">
-    <div class="col">
+  <div className="row row-cols-4">
+    <div className="col">
         <h4>Explore</h4>
         <p>Home</p>
         <p>Product</p>
         <p>New Arriable</p>
         <p>Brands</p>
     </div>
-    <div class="col">
+    <div className="col">
         <h4>Vist</h4>
         <p>Rampura Banasre <br /> Block:E, Housr No-217 <br />Dhaka Bangladesh</p>
     </div>
-    <div class="col">
+    <div className="col">
         <h4>Follow</h4>
         <p>Facebook</p>
         <p>Twitter</p>
         <p>Pinterest</p>
         <p>Instragram</p>
     </div>
-    <div class="col">
+    <div className="col">
         <h4>Contact</h4>
         <h5>Daniel Newaz</h5>
         <p>Phone No: 01785989100</p>

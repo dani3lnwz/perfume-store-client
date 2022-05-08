@@ -4,24 +4,23 @@ import './update.css'
 import { toast } from 'react-toastify';
 
 const Update = () => {
-    const {productId} = useParams();
+    const { productId } = useParams();
     const [product, setProduct] = useState({})
-    let {img, name, price, description, supplierName, quantity} = product;
+    let { img, name, price, description, supplierName, quantity } = product;
     useEffect(() => {
-        const url = `http://localhost:5000/product/${productId}`
-        console.log(url);
+        const url = `https://rocky-atoll-46081.herokuapp.com/product/${productId}`
         fetch(url)
-        .then(res => res.json())
-        .then((data) => setProduct(data));
+            .then(res => res.json())
+            .then((data) => setProduct(data));
     }, [])
 
-    const delivered =() => {
+    const delivered = () => {
         let Remaining = parseFloat(+product.quantity) - 1;
-        let newInventory = {name, img, description, price, quantity: Remaining, supplierName};
+        let newInventory = { name, img, description, price, quantity: Remaining, supplierName };
 
         setProduct(newInventory);
 
-        const url = `http://localhost:5000/product/${productId}`
+        const url = `https://rocky-atoll-46081.herokuapp.com/product/${productId}`
         fetch(url, {
             method: 'PUT',
             body: JSON.stringify(newInventory),
@@ -29,20 +28,20 @@ const Update = () => {
                 'Content-Type': 'application/json',
             }
         })
-        .then((res) => res.json())
-        .then(data => {
-            toast('Delivery Success!')
-        })
+            .then((res) => res.json())
+            .then(data => {
+                toast('Delivery Success!')
+            })
 
     }
 
     const restock = (e) => {
         e.preventDefault();
         let updatedQuantity = parseInt(+product.quantity) + parseInt(e.target.upQuantity.value);
-        let newInventory = {name, img, description, price, quantity: updatedQuantity, supplierName};
-        setProduct(newInventory);
+        let newInventory = { name, img, description, price, quantity: updatedQuantity, supplierName };
+        
 
-        const url = `http://localhost:5000/product/${productId}`
+        const url = `https://rocky-atoll-46081.herokuapp.com/product/${productId}`
         fetch(url, {
             method: 'PUT',
             body: JSON.stringify(newInventory),
@@ -50,10 +49,11 @@ const Update = () => {
                 'Content-Type': 'application/json',
             }
         })
-        .then((res) => res.json())
-        .then(data => {
-            toast('Delivery Success!')
-        })
+            .then((res) => res.json())
+            .then(data => {
+                toast('Delivery Success!')
+                setProduct(newInventory);
+            })
     }
     // const [product] = useProductDetail(productId);
 
@@ -66,7 +66,7 @@ const Update = () => {
 
 
     return (
-       <div>
+        <div>
             <div className='text-center my-5'>
                 <h1>Please update your item: {product.name}</h1>
             </div>
@@ -95,11 +95,11 @@ const Update = () => {
             </div>
 
             <div onSubmit={() => restock(quantity)} className='container'>
-                <input style={{width: "200px", display: "flex"}} className='container' type="number" placeholder='Enter Stock Number' name="" id="" />
-                <br /> 
-                
-                <input style={{width: "120px", display: "flex"}} className='container btn btn-success' type="submit" value="Restock Product" />
-                
+                <input style={{ width: "200px", display: "flex" }} className='container' type="number" placeholder='Enter Stock Number' name="" id="" />
+                <br />
+
+                <input style={{ width: "120px", display: "flex" }} className='container btn btn-success' type="submit" value="Restock Product" />
+
             </div>
         </div>
     );
